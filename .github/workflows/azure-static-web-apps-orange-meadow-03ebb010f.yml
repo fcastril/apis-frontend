@@ -56,7 +56,6 @@ jobs:
           AZURE_STATIC_WEB_APPS_NODE_VERSION: "20"
 
   close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
