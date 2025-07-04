@@ -1,44 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Hello World App</title>
     
-    <!-- Meta tags para SEO -->
-    <meta name="description" content="Aplicación React moderna con tiempo real y diseño responsive" />
-    <meta name="keywords" content="React, Vite, JavaScript, Frontend, Responsive" />
-    <meta name="author" content="Tu Nombre" />
+    <!-- Meta tags SEO -->
+    <title>APIS - Supply Chain Management | Soluciones Inteligentes</title>
+    <meta name="description" content="Optimizamos la gestión de su cadena de suministro con tecnología de Machine Learning e IA para maximizar disponibilidad y minimizar inversión." />
+    <meta name="keywords" content="supply chain, cadena suministro, machine learning, inteligencia artificial, SCM, inventarios, logística" />
+    <meta name="author" content="APIS Supply Chain Management" />
     
-    <!-- Meta tags para redes sociales -->
-    <meta property="og:title" content="React Hello World App" />
-    <meta property="og:description" content="Aplicación React moderna con tiempo real" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    
-    <!-- Preload para mejorar rendimiento -->
+    <meta property="og:url" content="https://www.apis.com.co/" />
+    <meta property="og:title" content="APIS - Supply Chain Management" />
+    <meta property="og:description" content="Soluciones que sincronizan su abastecimiento con el mercado" />
+    <meta property="og:image" content="/apis-og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.apis.com.co/" />
+    <meta property="twitter:title" content="APIS - Supply Chain Management" />
+    <meta property="twitter:description" content="Soluciones que sincronizan su abastecimiento con el mercado" />
+    <meta property="twitter:image" content="/apis-og-image.jpg" />
+
+    <!-- Preconnect para mejorar rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- IMPORTANTE: Configuración explícita para módulos ES -->
-    <script>
-      // Configuración para forzar MIME types correctos
-      if ('serviceWorker' in navigator) {
-        // Interceptar requests para archivos JS
-        navigator.serviceWorker.register('/sw.js').catch(() => {
-          // Ignore si no hay service worker
-        });
-      }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/App.css" rel="stylesheet">
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "APIS Supply Chain Management",
+      "url": "https://www.apis.com.co",
+      "telephone": "+57-310-852-6106",
+      "email": "info@apis.com.co",
+      "description": "Optimizamos la gestión de cadenas de suministro con tecnología de Machine Learning e Inteligencia Artificial",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO"
+      },
+      "sameAs": [
+        "https://www.apis.com.co"
+      ]
+    }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    
-    <!-- CRÍTICO: type="module" para ES modules -->
     <script type="module" src="/src/main.jsx"></script>
-    
-    <!-- Fallback para navegadores sin soporte ES modules -->
-    <script nomodule>
-      alert('Tu navegador no soporta ES modules. Por favor actualiza tu navegador.');
-    </script>
   </body>
 </html>
